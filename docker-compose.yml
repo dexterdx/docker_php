@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
-      - ./src:/var/www
+      - ./docker/denwer:/var/www
     depends_on:
       - mysql  
     networks:
@@ -25,8 +25,8 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./src:/var/www
-      - ./nginx:/etc/nginx/conf.d 
+      - ./docker/denwer:/var/www
+      - ./docker/denwer/nginx:/etc/nginx/conf.d 
     depends_on:
       - php 
     networks:
