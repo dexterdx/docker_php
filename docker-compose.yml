@@ -23,7 +23,7 @@ services:
     container_name: tools_php-nginx
     restart: unless-stopped
     ports:
-      - 80:80
+      - 8050:80
     volumes:
       - ./docker/denwer:/var/www
       - ./docker/denwer/nginx:/etc/nginx/conf.d 
